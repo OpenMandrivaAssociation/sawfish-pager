@@ -1,21 +1,22 @@
 %define name sawfish-pager
-%define version 0.7.2
+%define version 0.7.3
 %define release %mkrel 1
 %define sawfish 1.6.1
 %define sfepoch 2
+%define sfver %(rpm -q sawfish --queryformat %{VERSION})
 
 Summary: Lightweight desktop pager for Sawfish
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://sourceforge.net/projects/%name/files/pager/%version/%{name}-%{version}.tar.bz2
+Source0: http://download.tuxfamily.org/sawfishpager/%name-%version.tar.xz
 License: GPLv2+
 Group: Graphical desktop/Sawfish
 Url: http://sawfish-pager.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: gtk+2-devel
 BuildRequires: sawfish-devel >= %sfepoch:%sawfish
-Requires: sawfish = %sfepoch:%sawfish
+Requires: sawfish = %sfepoch:%sfver
 
 %description
 A pager is a map of your desktop. As maps go, it shows not only the visible
@@ -29,6 +30,7 @@ windows, and also move or raise/lower the latter.
 %setup -q
 
 %build
+%configure2_5x
 %make
 
 %install
@@ -41,6 +43,7 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc NEWS README TODO
-%_libexecdir/sawfish/%sawfish/*/pager
-%_datadir/sawfish/%sawfish/lisp/sawfish/wm/ext/pager.jl
+%_libexecdir/sawfish/%sfver/*/pager
+%_datadir/sawfish/%sfver/lisp/sawfish/wm/ext/pager.jl
+%_datadir/sawfish/%sfver/lisp/sawfish/wm/ext/pager.jlc
 
