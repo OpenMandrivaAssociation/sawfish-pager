@@ -1,7 +1,7 @@
 %define name sawfish-pager
-%define version 0.7.4
+%define version 0.90.0
 %define release %mkrel 1
-%define sawfish 1.6.1
+%define sawfish 1.7.0
 %define sfepoch 2
 %define sfver %(rpm -q sawfish --queryformat %{VERSION})
 
@@ -43,7 +43,7 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc NEWS README TODO
-%_libexecdir/sawfish/%sfver/*/pager
+%_libexecdir/sawfish/%sfver/*/sawfishpager
 %_datadir/sawfish/%sfver/lisp/sawfish/wm/ext/pager.jl
 %_datadir/sawfish/%sfver/lisp/sawfish/wm/ext/pager.jlc
 
