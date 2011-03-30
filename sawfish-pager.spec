@@ -1,7 +1,7 @@
 %define name sawfish-pager
-%define version 0.90.0
+%define version 0.90.1
 %define release %mkrel 1
-%define sawfish 1.7.0
+%define sawfish 1.8.0
 %define sfepoch 2
 %define sfver %(rpm -q sawfish --queryformat %{VERSION})
 
