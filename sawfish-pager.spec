@@ -1,6 +1,6 @@
 %define name sawfish-pager
-%define version 0.90.1
-%define release %mkrel 2
+%define version 0.90.2
+%define release %mkrel 1
 %define sawfish 1.8.1
 %define sfepoch 2
 %define sfver %(rpm -q sawfish --queryformat %{VERSION})
@@ -16,7 +16,7 @@ Url: http://sawfish-pager.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: gtk+2-devel
 BuildRequires: sawfish-devel >= %sfepoch:%sawfish
-Requires: sawfish = %sfepoch:%sfver
+Requires: sawfish >= %sfepoch:%sfver
 
 %description
 A pager is a map of your desktop. As maps go, it shows not only the visible
@@ -43,7 +43,7 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc NEWS README TODO
-%_libexecdir/sawfish/%sfver/sawfishpager
-%_datadir/sawfish/%sfver/lisp/sawfish/wm/ext/pager.jl
-%_datadir/sawfish/%sfver/lisp/sawfish/wm/ext/pager.jlc
+%_libexecdir/sawfish/sawfishpager
+%_datadir/sawfish/lisp/sawfish/wm/ext/pager.jl
+%_datadir/sawfish/lisp/sawfish/wm/ext/pager.jlc
 
