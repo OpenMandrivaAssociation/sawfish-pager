@@ -1,5 +1,5 @@
 %define name sawfish-pager
-%define version 0.90.2
+%define version 0.90.3
 %define release %mkrel 1
 %define sawfish 1.8.1
 %define sfepoch 2
