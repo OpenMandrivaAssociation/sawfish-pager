@@ -12,7 +12,7 @@ Release: %{release}
 Source0: http://download.tuxfamily.org/sawfishpager/%name-%version.tar.xz
 License: GPLv2+
 Group: Graphical desktop/Sawfish
-Url: http://sawfish-pager.sourceforge.net/
+Url: https://sawfish-pager.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: gtk+2-devel
 BuildRequires: sawfish-devel >= %sfepoch:%sawfish
