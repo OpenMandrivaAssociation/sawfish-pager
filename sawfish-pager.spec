@@ -14,6 +14,11 @@ License: GPLv2+
 Group: Graphical desktop/Sawfish
 Url: https://sawfish-pager.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: gtk+2-devel
 BuildRequires: sawfish-devel >= %sfepoch:%sawfish
 Requires: sawfish >= %sfepoch:%sfver
